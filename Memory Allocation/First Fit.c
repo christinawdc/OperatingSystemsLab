@@ -9,13 +9,13 @@ void allocateMemory(int blocks[], int numBlocks, int processes[], int numProcess
             if (blocks[j] >= processes[i]) {
                 // Allocate the process to this block 
                 printf("Process %d of size %d allocated to block %d (Size: %d)\n", i + 1, processes[i], j + 1, blocks[j]);
-                blocks[j] -= processes[i];  // Decrease the hole size after allocation
+                blocks[j] -= processes[i];  // Decrease the block size after allocation
                 allocated = 1;
                 break;
             }
         }
 
-        // If no suitable hole was found
+        // If no suitable block was found
         if (!allocated) {
             printf("Process %d could not be allocated\n", i + 1);
         }
@@ -34,7 +34,7 @@ int main() {
 
     int blocks[numBlocks], processes[numProcesses];
 
-    // Step 3: Get the sizes of the memory holes
+    // Step 3: Get the sizes of the memory blocks
     printf("Enter the sizes of the memory blocks: \n");
     for (int i = 0; i < numBlocks; i++) {
         printf("Block %d size: ", i + 1);
