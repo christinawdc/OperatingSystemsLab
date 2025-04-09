@@ -21,6 +21,6 @@ void main()
     totalseektime+=distance;
     printf("\nHead movement from %d to %d is %d",a[i],a[i+1],distance);
   }
-  printf("\nTotal Seek Time is : %d",&totalseektime);
+  printf("\nTotal Seek Time is : %d",totalseektime);
   
 }
